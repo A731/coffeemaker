@@ -1,0 +1,15 @@
+The DIY IoT Coffeemaker runs on a first generation Raspberry Pi model B. It currently only has a temperature sensor
+The project is not nearly complete, but i will give updates as time goes by. Please feel free give ideas about what i can do
+with the following equipment related to coffeemaking, as i do not have money for ordering new components.
+
+1x DS18B20 Temperature Sensor
+1x DS18B20 Temperature Sensor Waterproof
+1x Adafruit Photo Transistor Light Sensor
+1x HC-SR04 Ultrasonic Distance Sensor
+1x NEMA-17 Stepper motor
+1x PIR Sensor from Pi Hut
+1x Photoresistorfrom Pi Hut 
+1x Active Buzzer
+1x Red 10mm LED
+1x Blue 10mm LED
+1x Waterpump 
