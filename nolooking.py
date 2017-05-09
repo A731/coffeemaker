@@ -69,12 +69,13 @@ while svar != ord('4'):
                 temp_string = lines[1][equals_pos+2:]
                 temp_c = float(temp_string) / 1000.0
                 temp_f = temp_c * 9.0 / 5.0 + 32.0
-                #return temp_c, temp_f
-                screen.addstr(4, 6, "" + temp_c)
-                screen.refresh()
+                return temp_c #, temp_f  #uncomment for fahrenheit
         while True:
-         print(read_temp())
-         time.sleep(1)
+               curses.endwin()
+               screen.clear()               
+               screen.addstr(4, 6, "" + str(int(read_temp())))
+               screen.refresh
+               time.sleep(1)
      if svar == ord('3'):
           curses.endwin()
           screen.clear()
