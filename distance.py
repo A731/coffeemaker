@@ -7,9 +7,9 @@ GPIO_TRIGGER = 23
 GPIO_ECHO = 24
 GPIO_PUMP = 17
  
-GPIO.setup(GPIO_TRIGGER, GPIO.OUT)
-GPIO.setup(GPIO_ECHO, GPIO.IN)
-GPIO.setup(GPIO_PUMP, GPIO.OUT)
+GPIO.setup(GPIO_TRIGGER, GPIO.OUT) #Pin 16
+GPIO.setup(GPIO_ECHO, GPIO.IN) #Pin 18
+GPIO.setup(GPIO_PUMP, GPIO.OUT) #Pin 11
 def distance():
     # Trigger high
     GPIO.output(GPIO_TRIGGER, True)
@@ -42,6 +42,7 @@ if distance()>=5: #5 example value
 	GPIO.output(GPIO_PUMP, True)
 	time.wait(5)
 
+	#For testing purposes
 #if __name__ == '__main__':
 #    try:
 #        while True:
@@ -49,7 +50,6 @@ if distance()>=5: #5 example value
 #            print ("Measured Distance = %.1f cm" % dist)
 #            time.sleep(1)
 # 
-#        # Reset by pressing CTRL + C
 #    except KeyboardInterrupt:
 #        print("Measurement stopped by User")
 #        GPIO.cleanup()
