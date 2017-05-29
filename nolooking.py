@@ -9,8 +9,8 @@ import RPi.GPIO as GPIO
 
 svar = 0
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(27, GPIO.OUT) 
-GPIO.setup(18, GPIO.OUT) 
+GPIO.setup(27, GPIO.OUT) #Pin 12
+GPIO.setup(18, GPIO.OUT) #Pin 13
 
 while svar != ord('4'):
      screen = curses.initscr()
