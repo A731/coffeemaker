@@ -1,7 +1,6 @@
 import RPi.GPIO as GPIO
 import time
  
-#Viktig
 GPIO.setmode(GPIO.BCM)
  
 GPIO_TRIGGER = 23
@@ -12,17 +11,17 @@ GPIO.setup(GPIO_TRIGGER, GPIO.OUT)
 GPIO.setup(GPIO_ECHO, GPIO.IN)
 GPIO.setup(GPIO_PUMP, GPIO.OUT)
 def distance():
-    # Trigger høg
+    # Trigger high
     GPIO.output(GPIO_TRIGGER, True)
  
-    # 0.01ms = låg
+    # 0.01ms = low
     time.sleep(0.00001)
     GPIO.output(GPIO_TRIGGER, False)
  
     StartTid = time.time()
     StoppTid = time.time()
  
-    # lagre StartTid
+    # save StartTime
     while GPIO.input(GPIO_ECHO) == 0:
         StartTid = time.time()
  
@@ -39,7 +38,7 @@ def distance():
     return distance
  
 
-if distance()>=5: #5 er eksempelverdi
+if distance()>=5: #5 example value
 	GPIO.output(GPIO_PUMP, True)
 	time.wait(5)
 
